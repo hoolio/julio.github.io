@@ -1,0 +1,10 @@
+permalink:   pretty
+markdown:    rdiscount
+rdiscount:
+  extensions: [smart]
+title: How nice!
+description: mumumumumur
+url: http://muan.co
+auto: true
+disqus_shortname: muan
+feedburner_id: muan
