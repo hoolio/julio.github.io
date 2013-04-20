@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta content='{{ page.title }} - {{ site.title }}' name='title' />
+    <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
+    <title>{{ page.title }} - {{ site.title }}</title>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include flag.html %}
+    <div class="side">
+      {% include sidebar.html %}
+    </div>
+    <div id='container'>
+      
+      <div class="content">
+          <section class='post'>
+            <a href='{{ page.url }}' class='special-line'>
+              {{ page.title }}
+            </a>
+            {{ content }}
+            <hr />
+            {% include hire.html %}
+          </section>
+        </div>
+    </div>
+  </body>
+</html>
