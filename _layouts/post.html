@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta content='{{ page.title }} - {{ site.title }}' property='og:title' />
+    <title>{{ page.title }} - {{ site.title }}</title>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include flag.html %}
+    <div class="side">
+      {% include sidebar.html %}
+    </div>
+    <div id='container'>
+      
+      <div class="content">
+          <section class='post'>
+            <a href='{{ page.url }}' class='special-line'>
+              {{ page.title }}
+            </a>
+            <span class='date'>{{ page.date | date_to_string }}</span>
+            {{ content }}
+            {% include signoff.html %}
+            {% include social_links.html %}
+            {% include hire.html %}
+            {% include pages.html %}
+
+            {% if page.disqus == 'y' %}
+              {% include disqus.html %}
+            {% endif %}
+
+          </section>
+          {% include footer.html %}
+        </div>
+    </div>
+  </body>
+</html>
